@@ -1,0 +1,24 @@
+{% extends 'app_main/base.html' %}
+
+{% block auth %}
+{% load static %}
+
+<section id="signout" class="wrapper style1 fade-up">
+    <div class="inner">
+
+        <section class="logout-page-content">
+            <div class="logout-container">
+                <img class="logout-img" src="https://unsplash.it/150/150">
+                <h2> You've been signed out! </h2>
+                <p>Not ready to leave us yet? Sign in again <a href="{% url 'users:signin' %}">here</a></p>
+            </div>
+        </section>
+        <p></p>
+
+    </div>
+</section>
+
+{% endblock %}
+
+
+
