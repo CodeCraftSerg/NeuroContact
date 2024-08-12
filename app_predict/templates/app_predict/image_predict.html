@@ -1,0 +1,15 @@
+{% extends 'app_main/base.html' %}
+
+{% block image_predict %}
+{% load static %}
+
+{% if user.is_authenticated %}
+
+<section id="five" class="wrapper style1 fade-up">
+    <div class="inner">
+        <h2>Image recognition</h2>
+    </div>
+</section>
+
+{% endif %}
+{% endblock %}
