@@ -1,9 +1,9 @@
-# CloudyContacts Web Application
+# NeuroContact Web Application
 
 ![page](/img_src/index.jpg)
 
 ## About
-CloudyContacts is a web application built with the Django framework that provides users with tools to manage contacts and notes, upload files to cloud storage, and receive news summaries. The application includes authentication mechanisms to ensure the privacy and security of user data.
+NeuroContact is a web application built with the Django framework that provides users with tools to manage contacts and notes, upload files to cloud storage, and receive news summaries. The application includes authentication mechanisms to ensure the privacy and security of user data.
 
 ## Requirements
 API keys are required to run this application. Obtain the necessary keys at the addresses below:

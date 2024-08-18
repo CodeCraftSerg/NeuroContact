@@ -1,0 +1,75 @@
+{% extends 'app_main/base.html' %}
+
+{% block image_predict %}
+    {% load static %}
+
+    {% if user.is_authenticated %}
+
+        <section id="five" class="wrapper style1 fade-up">
+            <div class="inner">
+                <h2>Image recognition</h2>
+
+                <div class="navbar fixed-top bgcolor center">
+                    <br>
+                    <form name="getFile" id="getFile" method="post" enctype="multipart/form-data" class="form-style">
+                        {% csrf_token %}
+                        <h4>Upload your image to recognize the object</h4>
+                        <p></p>
+                        <div class="form__group file">
+                            <label for="file-upload" class="button">Choose File</label>
+                            <input id="file-upload" type="file" name="project_files" class="inputfile"
+                                   style="display: none;">
+                            <span id="file-name" style="margin-left: 10px;">No file chosen</span>
+                        </div>
+                        <p></p>
+                        <div class="form__group file">
+                            <button type="submit" class="button primary">Send Image</button>
+                        </div>
+                    </form>
+                </div>
+                <main role="main" class="container top">
+                    {% if messages %}
+                        <br>
+                        <div class="col-12 col-xl-8 height_100 rounded">
+                            <div class="messages">
+                                <ul>
+                                    {% for message in messages %}
+                                        <li class="message_element">
+                                            {{ message }}
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    {% endif %}
+                    <hr/>
+
+                    {% if history %}
+                        <div>
+                            <h4>Recognized objects:</h4>
+                        </div>
+                        <div class="requestHistory">
+                            <div class="predictrow">
+                                {% for row in history %}
+                                    <div class="col-12 predictcolmd4">
+                                        <div class="card predictcentercard" style="max-width: 200px;">
+                                            <div class="card-body">
+                                                <p class="card-text">Predicted class of the image
+                                                    - <b>{{ row.response }}</b></p>
+                                            </div>
+                                            <img src="data:image/{{ row.type }};base64,{{ row.body }}"
+                                                 alt="{{ row.name }}" class="card-img-top"
+                                                 style="max-width: 100%; height: auto; max-height: 400px;">
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endif %}
+                </main>
+
+            </div>
+        </section>
+
+    {% endif %}
+{% endblock %}

@@ -6,7 +6,7 @@ authors = ["Serg <https://github.com/CodeCraftSerg>", "Olha <https://github.com/
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = ">=3.10, <3.11"
 black = "^24.4.0"
 django = "^5.0.4"
 psycopg2-binary = "^2.9.9"
@@ -21,6 +21,12 @@ django-cloudinary-storage = "^0.3.0"
 django-session-timeout = "^0.1.0"
 six = "^1.16.0"
 pip = "^24.0"
+tensorflow-io-gcs-filesystem = { version = "0.31.0"}
+tensorflow = "2.16.1"
+keras = "3.5.0"
+pillow = "10.4.0"
+gdown = "^5.2.0"
+pytz = "^2024.1"
 
 [build-system]
 requires = ["poetry-core"]
