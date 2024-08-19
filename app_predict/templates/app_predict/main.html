@@ -45,7 +45,7 @@
                     <hr/>
 
                     {% if history %}
-                        <div>
+                        <div style="margin-top: -10px;">
                             <h4>Recognized objects:</h4>
                         </div>
                         <div class="requestHistory">
@@ -53,13 +53,14 @@
                                 {% for row in history %}
                                     <div class="col-12 predictcolmd4">
                                         <div class="card predictcentercard" style="max-width: 200px;">
-                                            <div class="card-body">
-                                                <p class="card-text">Predicted class of the image
-                                                    - <b>{{ row.response }}</b></p>
-                                            </div>
                                             <img src="data:image/{{ row.type }};base64,{{ row.body }}"
                                                  alt="{{ row.name }}" class="card-img-top"
-                                                 style="max-width: 100%; height: auto; max-height: 400px;">
+                                                 style="max-width: 100%; height: auto; max-height: 400px;
+                                                        border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                                            <div class="card-body">
+                                                <p class="card-text">Predicted image class 
+                                                    - <b>{{ row.response }}</b></p>
+                                            </div>
                                         </div>
                                     </div>
                                 {% endfor %}
