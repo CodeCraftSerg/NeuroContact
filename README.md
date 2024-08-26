@@ -1,9 +1,23 @@
 # NeuroContact Web Application
 
-![page](/img_src/index.jpg)
+![Main page](/img_src/main_page.PNG)
 
 ## About
-NeuroContact is a web application built with the Django framework that provides users with tools to manage contacts and notes, upload files to cloud storage, and receive news summaries. The application includes authentication mechanisms to ensure the privacy and security of user data.
+NeuroContact is a web application built with the Django framework that provides users with tools to manage contacts and notes, upload files to cloud storage, receive news summaries and image recognition. The application includes authentication mechanisms to ensure the privacy and security of user data.
+
+## Image recognition
+![Image recognition](/img_src/im_rec_1.PNG)
+![Image recognition](/img_src/im_rec_2.PNG)
+![Image recognition](/img_src/im_rec_3.PNG)
+
+## Model Architecture
+![Model Architecture](/img_src/pr_arch_1.JPG)
+![Model Architecture](/img_src/pr_arch_2.JPG)
+![Model Architecture](/img_src/pr_arch_3.JPG)
+
+## Graphs for the model
+![Model accuracy](/img_src/model_accuracy.JPG)
+![Train val loss acc](/img_src/train_val_loss_acc.JPG)
 
 ## Requirements
 API keys are required to run this application. Obtain the necessary keys at the addresses below:
