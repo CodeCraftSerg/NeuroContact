@@ -19,14 +19,16 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from app_datascience.views import data_science_page
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
-    path("", include("app_main.urls")),
-    path("users/", include("users.urls")),
-    path("app_predict/", include("app_predict.urls")),
-    path("app_contacts/", include("app_contacts.urls")),
-    path("app_notes/", include("app_notes.urls")),
-    path("app_files/", include("app_files.urls")),
-    path("app_news/", include("app_news.urls")),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+                  path("admin/", admin.site.urls),
+                  path("", include("app_main.urls")),
+                  path("users/", include("users.urls")),
+                  path("app_predict/", include("app_predict.urls")),
+                  path("app_contacts/", include("app_contacts.urls")),
+                  path("app_notes/", include("app_notes.urls")),
+                  path("app_files/", include("app_files.urls")),
+                  path("app_news/", include("app_news.urls")),
+                  path('datascience/', include('app_datascience.urls')),
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

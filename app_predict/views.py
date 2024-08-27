@@ -99,3 +99,5 @@ def main(request):
         "app_predict/main.html",
         context={"history": history},
     )
+
+

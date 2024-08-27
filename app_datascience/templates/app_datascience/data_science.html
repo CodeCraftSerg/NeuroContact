@@ -1,0 +1,64 @@
+{% extends 'app_main/base.html' %}
+
+{% block contacts %}
+{% load static %}
+<style>
+        .scrollable {
+            max-width: 100%; /* Ограничьте ширину контейнера */
+            max-height: 400px; /* Ограничьте высоту контейнера */
+            overflow-x: auto; /* Добавьте горизонтальную прокрутку */
+            overflow-y: auto; /* Добавьте вертикальную прокрутку */
+        }
+
+        .scrollable img {
+            display: block; /* Отображение изображений как блочных элементов */
+            max-width: 100%; /* Ограничьте максимальную ширину изображения */
+            height: auto; /* Автоматическое регулирование высоты изображения */
+        }
+    </style>
+<head>
+    <title>Data Science Model Overview</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'app_datascience/css/datascience_style.css' %}">
+</head>
+<section id="datascience" class="wrapper style1 fade-up">
+    <div class="inner">
+        <h2>Data Science Model Overview</h2>
+        <h3>Model: {{ model_name }}</h3>
+        <p>{{ model_description }}</p>
+
+        <h3>Reasons for Choosing the Model:</h3>
+        <p>{{ reasons_for_choice }}</p>
+
+        <h3>Challenges Faced:</h3>
+        <p>{{ challenges_faced }}</p>
+
+        <h3>Model Results:</h3>
+        <p>{{ training_accuracy }}</p>
+        <p>{{ training_loss }}</p>
+        <p>{{ testing_accuracy }}</p>
+        <p>{{ testing_loss }}</p>
+
+        <h3>Accuracy Graph:</h3>
+        <div class="scrollable">
+            <img src="data:image/png;base64,{{ accuracy_graph }}" alt="Accuracy Graph">
+        </div>
+
+        <h3>Loss Graph:</h3>
+        <div class="scrollable">
+            <img src="data:image/png;base64,{{ loss_graph }}" alt="Loss Graph">
+        </div>
+        <h3>Training and Validation Accuracy:</h3>
+        <div class="scrollable">
+            <img src="data:image/png;base64,{{ train_val_acc_graph }}" alt="Training and Validation Accuracy">
+        </div>
+
+        <h3>Training and Validation Loss:</h3>
+        <div class="scrollable">
+            <img src="data:image/png;base64,{{ train_val_loss_graph }}" alt="Training and Validation Loss">
+        </div>
+    </div>
+</section>
+{% endblock %}
+

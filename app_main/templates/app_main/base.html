@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="{% static 'app_main/css/style.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'app_contacts/css/contact.css' %}"/>
     <link rel="stylesheet" href="{% static 'app_predict/predict.css' %}"/>
+
 </head>
 <body class="is-preload">
 
@@ -32,6 +33,8 @@
                     <li><a href="{% url 'app_notes:notes' %}">Notes</a></li>
                     <li><a href="{% url 'app_files:files_page' %}">Files</a></li>
                     <li><a href="{% url 'app_news:news_page' %}">News</a></li>
+                    <li><a href="{% url 'data_science_page' %}">Data Science</a></li>
+
                     <li>
                         <form method="post" action="{% url 'users:signout' %}">
                             {% csrf_token %}

@@ -87,21 +87,23 @@ SESSION_EXPIRE_AFTER_LAST_ACTIVITY = True
 SESSION_TIMEOUT_REDIRECT = "/users/signin"  # Sign In URL
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True  # Invalid session
 
+
 TEMPLATES = [
     {
-        "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
-        "APP_DIRS": True,
-        "OPTIONS": {
-            "context_processors": [
-                "django.template.context_processors.debug",
-                "django.template.context_processors.request",
-                "django.contrib.auth.context_processors.auth",
-                "django.contrib.messages.context_processors.messages",
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, 'app_datascience/templates')],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
             ],
         },
     },
 ]
+
 
 WSGI_APPLICATION = "NeuroContact.wsgi.application"
 
