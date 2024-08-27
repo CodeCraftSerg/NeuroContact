@@ -27,7 +27,7 @@ API keys are required to run this application. Obtain the necessary keys at the 
 
 ## Run Locally
 ```bash
-  git clone https://github.com/CodeCraftSerg/CloudyContacts
+  git clone https://github.com/CodeCraftSerg/NeuroContact
 ```
 Install dependencies
 ```bash

@@ -11,7 +11,7 @@ from PIL import Image
 
 
 if not exists("./app_predict/model/cifar10_result.keras"):
-    url = "https://drive.google.com/file/d/1JYPwOHNS1YLhftqOxummsSRt2CMMZDqZ/view?usp=sharing"
+    url = "https://drive.google.com/file/d/1iQZbLZZAAQP3CdqxIi1PWE73xv7fQxqq/view?usp=sharing"
     output = "cifar10_result.keras"
     gdown.download(url, output, quiet=False, fuzzy=True)
 
