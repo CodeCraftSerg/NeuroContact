@@ -25,6 +25,20 @@ API keys are required to run this application. Obtain the necessary keys at the 
 * Create an account on **[abstractapi.com](https://www.abstractapi.com)**. Then, go to **[abstractapi.com/api](https://app.abstractapi.com/api/ip-geolocation/tester)** and create an API key for access.
 * Create an account on **[cloudinary.com](https://cloudinary.com)**. Then, go to settings page and generate your Access Keys.
 
+## Download and run Docker image
+* visit docker page: **[Docker hub](https://hub.docker.com/r/clemontine839/neurocontact)**
+
+Download and run docker image:
+```bash
+    docker run -d -p 8000:8000 -name neurocontact clemeontine839/neurocontact:tag
+```
+Click an [url](http://207.0.0.1:8000) to visit application
+
+Download docker image:
+```bash
+    docker pull clemeontine839/neurocontact:tag
+```
+
 ## Run Locally
 ```bash
   git clone https://github.com/CodeCraftSerg/NeuroContact
