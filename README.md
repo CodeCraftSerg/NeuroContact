@@ -30,13 +30,17 @@ API keys are required to run this application. Obtain the necessary keys at the 
 
 Download and run docker image:
 ```bash
-    docker run -d -p 8000:8000 -name neurocontact clemeontine839/neurocontact:tag
+    docker run -d -p 8000:8000 --name neurocontact clemontine839/neurocontact:tag
 ```
 Click an [url](http://207.0.0.1:8000) to visit application
 
 Download docker image:
 ```bash
-    docker pull clemeontine839/neurocontact:tag
+    docker pull clemontine839/neurocontact:tag
+```
+Run docker image as container locally:
+```bash
+    docker run -d -p 8000:8000 --name neurocontact clemontine839/neurocontact:tag
 ```
 
 ## Run Locally
